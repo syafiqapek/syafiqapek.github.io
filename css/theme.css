@@ -1,49 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>GitHub Pages – CSS Theme Sample</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+/* =========================
+   THEME VARIABLES
+========================= */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-light: #dbeafe;
+  --color-secondary: #0f172a;
+  --color-bg: #f8fafc;
+  --color-card: #ffffff;
+  --color-text: #1e293b;
+  --color-border: #e2e8f0;
 
-  <!-- Theme CSS -->
-  <link rel="stylesheet" href="css/theme.css" />
-</head>
-<body>
+  --radius-md: 10px;
+  --radius-sm: 6px;
 
-  <!-- Header -->
-  <header class="app-header">
-    <h1>My Static Site</h1>
-    <p>GitHub Pages + Custom CSS Theme</p>
-  </header>
+  --padding-md: 20px;
+  --padding-lg: 30px;
+}
 
-  <!-- Main content -->
-  <main class="container">
+/* =========================
+   BASE RESET
+========================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <section class="card">
-      <h2>Welcome 👋</h2>
-      <p>
-        This page is fully hosted on GitHub Pages using
-        <strong>custom HTML and CSS</strong>.
-      </p>
-      <button class="btn btn-primary">Primary Action</button>
-      <button class="btn btn-outline">Secondary</button>
-    </section>
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
 
-    <section class="card card-info">
-      <h3>Theme Principles</h3>
-      <ul>
-        <li>CSS Variables</li>
-        <li>Reusable components</li>
-        <li>Mobile-friendly layout</li>
-      </ul>
-    </section>
+/* =========================
+   LAYOUT
+========================= */
+.app-header {
+  background: var(--color-primary);
+  color: white;
+  padding: var(--padding-lg);
+  text-align: center;
+}
 
-  </main>
+.container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 var(--padding-md);
+}
 
-  <!-- Footer -->
-  <footer class="app-footer">
-    © 2026 My Project
-  </footer>
+.app-footer {
+  text-align: center;
+  padding: 15px;
+  color: #64748b;
+}
 
-</body>
-</html>
+/* =========================
+   CARD COMPONENT
+========================= */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: var(--padding-md);
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border);
+}
+
+.card-info {
+  background: var(--color-primary-light);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3 {
+  margin-bottom: 10px;
+}
+
+p, ul {
+  margin-bottom: 12px;
+}
+
+ul {
+  padding-left: 18px;
+}
